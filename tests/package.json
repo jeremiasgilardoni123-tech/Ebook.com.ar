@@ -1,0 +1,13 @@
+{
+  "name": "motocred-tests",
+  "private": true,
+  "description": "Pruebas E2E del plugin y theme MotoCred contra un WordPress local (ver tools/dev-setup.sh).",
+  "scripts": {
+    "e2e": "node e2e.js",
+    "e2e:public": "MODE=public node e2e.js",
+    "admin": "node admin.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}

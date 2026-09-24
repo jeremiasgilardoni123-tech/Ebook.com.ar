@@ -1,0 +1,12 @@
+/*
+Theme Name:        MotoCred 2026
+Description:       Theme mobile-first para MotoCred: catálogo de motos, planes, simulador y WhatsApp con contexto. Requiere el plugin MotoCred Core. Usa el logo cargado en Apariencia → Personalizar → Identidad del sitio (no lo modifica).
+Version:           1.0.0
+Requires at least: 6.4
+Requires PHP:      8.0
+Author:            MotoCred
+Text Domain:       motocred
+License:           GPL-2.0-or-later
+*/
+
+/* Los estilos están en assets/css/theme.css (cargado con versión para caché). */
