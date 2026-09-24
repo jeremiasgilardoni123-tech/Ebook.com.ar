@@ -358,7 +358,8 @@ add_action( 'template_redirect', function () {
 		}
 		list( $from, $to ) = array_map( 'trim', explode( '->', $line, 2 ) );
 		if ( $from && $to && untrailingslashit( strtolower( $from ) ) === $path ) {
-			wp_safe_redirect( str_starts_with( $to, 'http' ) ? $to : home_url( $to ), 301, 'MotoCred' );
+			// Destinos cargados por un administrador: se permiten URLs externas.
+			wp_redirect( str_starts_with( $to, 'http' ) ? esc_url_raw( $to ) : home_url( $to ), 301, 'MotoCred' ); // phpcs:ignore WordPress.Security.SafeRedirect
 			exit;
 		}
 	}

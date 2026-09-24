@@ -48,4 +48,4 @@ $WP plugin activate motocred-core
 $WP theme activate motocred-2026
 $WP motocred seed --demo
 $WP rewrite flush --hard
-echo "Listo: php -S 127.0.0.1:8080 -t $WP_DIR  (admin / admin)"
+echo "Listo: php -S ${URL#http://} -t $WP_DIR  → $URL (admin / admin)"

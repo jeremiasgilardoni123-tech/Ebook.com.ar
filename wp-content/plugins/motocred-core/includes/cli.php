@@ -127,6 +127,8 @@ class MotoCred_CLI {
 		$settings = get_option( MotoCred_Data::OPT_SETTINGS, array() );
 		$settings = is_array( $settings ) ? $settings : array();
 		$settings['facebook'] = $settings['facebook'] ?? 'https://www.facebook.com/motocred.mza/';
+		// Sólo actúan si la URL vieja da 404 (es decir, después de despublicar la página vieja).
+		$settings['redirects'] = $settings['redirects'] ?? "/gi/ -> /motos/marca/gilera/\n/tienda-2/ -> /motos/\n/tienda/ -> /motos/";
 		if ( $demo ) {
 			$settings['whatsapp'] = '261 000-0000'; // EJEMPLO.
 		}
